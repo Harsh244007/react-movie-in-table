@@ -15,8 +15,8 @@ const Movies = () => {
 
     const moviesData = data[0].data.results || []
 
-    return (<section>
-        <table>
+    return (<section style={{"margin":"auto"}}>
+        <table style={{"margin":"auto"}}>
             <MovieTableHead setSortMovies={setSortMovies} />
             <MovieTableBody moviesData={moviesData}  sortMovies={sortMovies}/>
         </table>
