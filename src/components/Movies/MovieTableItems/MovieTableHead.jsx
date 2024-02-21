@@ -6,7 +6,7 @@ const MovieTableHead = ({ setSortMovies = () => { } }) => {
     }
     return (<thead>
         <tr>
-            <th><button style={{ color: "black" }} onClick={handleTitleSort}>Title</button></th>
+            <th><button style={{ color: "black", padding: "4px 8px", border: "0px" }} onClick={handleTitleSort}>Title</button></th>
             <th>Votes average</th>
             <th>Total votes</th>
             <th>Genres</th>
