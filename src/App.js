@@ -5,10 +5,10 @@ import Loading from "./components/common/loading";
 
 export default function App() {
     return (
-        <section className="App">
+        <main className="App">
             <Suspense fallback={<Loading />}>
                 <Movies />
             </Suspense>
-        </section>
+        </main>
     );
 }
