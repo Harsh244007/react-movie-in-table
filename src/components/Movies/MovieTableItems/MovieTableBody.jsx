@@ -2,14 +2,14 @@ import { memo } from "react"
 import { apiKey, genreUrl } from "../../../configs"
 import { useFetchMovies } from "../../../hooks/fetchMovies"
 
-const MovieTableBody = ({ moviesData = [], sortMovies = "null" }) => {
+const MovieTableBody = ({ moviesData = [], sortMovies = 'null' }) => {
 
     const { data: gendres } = useFetchMovies(genreUrl + apiKey)
     if (gendres.length === 0) return <p> Loading</p>
     if (gendres[0].error) return <p>Something went worng please try again</p>
 
     const genreData = gendres[0].data.genres
-    const sortingCondition = (a, b) => a.title.toLowerCase() < b.title.toLowerCase() ? sortMovies === "asc" ? -1 : 1 : sortMovies === "asc" ? 1 : -1
+    const sortingCondition = (a, b) => sortMovies === 'null' ? 0 : a.title.toLowerCase() < b.title.toLowerCase() ? sortMovies === "asc" ? -1 : 1 : sortMovies === "asc" ? 1 : -1
 
     return (<tbody>
         {moviesData.sort(sortingCondition).map((item) => {
