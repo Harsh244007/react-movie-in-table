@@ -1,8 +1,6 @@
-import { useEffect } from "react"
-import { useState } from "react"
 import GENREDATA from "../configs/JSON/Genredata.json"
 import MOVIESDATA from "../configs/JSON/Moviesdata.json"
-export const useFetchMovies = (url) => {
+export const useFetchMovies = (url:string) => {
 
     // const [data, setData] = useState([])
 
